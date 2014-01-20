@@ -1,25 +1,60 @@
-var names = []
-var phone = []
-var street = []
+var vicNames = []
+var vicPhone = []
+var vicStreet = []
 
-
+var volNames = []
+var volPhone = []
+var volStreet = []
 
 var starter = parseInt(prompt("How many disaster victims do you wish to enter?","0"));
-	for (i = 0; i < starter; i++) {
+	for (i=0; i<starter; i++) {
 
-	var getNames = prompt("Enter victims name:");
-		names.push(getNames);
+	var vicGetNames = prompt("Enter victims name:");
+		vicNames.push(vicGetNames);
 
-	var getPhone = prompt("Enter victims phone number:");
-		phone.push(getPhone);
+	var vicGetPhone = prompt("Enter victims phone number:");
+		vicPhone.push(vicGetPhone);
 
-	var getStreet = prompt("Enter victims street");
-		street.push(getStreet);
+	var vicGetStreet = prompt("Enter victims street");
+		vicStreet.push(vicGetStreet);
 };
 
-console.log(names);
-console.log(phone);
-console.log(street);
+var volunteers = parseInt(prompt("How many volunteers do you wish to enter?","0"));
+	for (i=0; i<volunteers; i++) {
+
+	var volGetNames = prompt("Enter volunteers name:");
+		volNames.push(volGetNames);
+
+	var volGetPhone = prompt("Enter volunteers phone number:");
+		volPhone.push(volGetPhone);
+
+	var volGetStreet = prompt("Enter volunteers street");
+		volStreet.push(volGetStreet);
+};
+
+var displayVics = [];
+for (i=0;i<starter;i++) {
+	displayVics.push( "Name: " + vicNames[i] + " Phone: " + vicPhone[i] + " Street: " + vicStreet[i] );
+};
+
+var displayVols = [];
+for (i=0;i<volunteers;i++) {
+	displayVols.push( "Name: " + volNames[i] + " Phone: " + volPhone[i] + " Street: " + volStreet[i] );
+};
+
+alert("Number of persons in need: " + starter +
+	"\nNumber of volunteers: " + volunteers +
+	"\nPersons in need: " + displayVics +
+	"\nVolunteers: " + displayVols);
+
+// console.log(vicNames);
+// console.log(vicPhone);
+// console.log(vicStreet);
+
+// console.log(volNames);
+// console.log(volPhone);
+// console.log(volStreet);
+
 
 
 
